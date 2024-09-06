@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Delivery Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="source_lat">Source Latitude:</label>
+        <input type="text" id="source_lat" name="source_lat" ><br><br>
+
+        <label for="source_lon">Source Longitude:</label>
+        <input type="text" id="source_lon" name="source_lon" ><br><br>
+
+        <label for="destn_lat">Destination Latitude:</label>
+        <input type="text" id="destn_lat" name="destn_lat" ><br><br>
+
+        <label for="destn_lon">Destination Longitude:</label>
+        <input type="text" id="destn_lon" name="destn_lon" ><br><br>
+
+        <label for="payload">Payload:</label>
+        <input type="text" id="payload" name="payload" ><br><br>
+
+        <input type="submit" value="Predict" >
+    </form>
+</body>
+</html>
